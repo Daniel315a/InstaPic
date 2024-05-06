@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-html {height: 100%;}
+html{height: 100vh;}
 
 * {
     box-sizing: border-box;
@@ -11,5 +11,7 @@ html {height: 100%;}
 }
 
 body {
-    background: linear-gradient(rgb(116, 116, 207), pink);
+    background-image: linear-gradient(to bottom, rgb(116, 116, 207), pink);
+
+    background-size: 100% 200%; /* 100% de ancho, 200% de altura para cada gradiente */
 }

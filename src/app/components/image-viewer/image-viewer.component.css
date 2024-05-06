@@ -1,0 +1,57 @@
+
+.modal{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #111111bd;
+    display: flex;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-container{
+    margin: auto;
+    width: 90%;
+    max-width: 700px;
+    background-color:#fff;
+    border-radius: 6px;
+    padding: 2em 1.5em;
+    display: flex;
+    gap: 20px;
+    border: 3px solid black;
+}
+
+.image img{
+    width: 450px;
+    height: 350px;
+}
+
+.comentarios{
+    width: 100%;
+}
+.comentarios h2{
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+/* Esta es la clase que debes quitar o agregar */
+.modal-show{
+    opacity: 1;
+    pointer-events: unset;
+
+}
+
+.parrafos{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.parrafos p{
+    font-size: 12px;
+    border-bottom: solid 1px black;
+    padding-bottom: 5px;
+}
