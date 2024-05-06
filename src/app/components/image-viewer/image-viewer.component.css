@@ -21,6 +21,7 @@
     display: flex;
     gap: 20px;
     border: 3px solid black;
+
 }
 
 .image img{
@@ -29,7 +30,7 @@
 }
 
 .comentarios{
-    width: 100%;
+    max-width: 250px;
 }
 .comentarios h2{
     margin-bottom: 30px;
@@ -47,6 +48,7 @@
     display: flex;
     flex-direction: column;
     gap: 2rem;
+    flex-wrap: wrap;
 
 }
 
@@ -55,3 +57,13 @@
     border-bottom: solid 1px black;
     padding-bottom: 5px;
 }
+
+.parrafos div > input{
+    max-width: 180px;
+}
+
+input::placeholder {
+    color: gray;
+    font-size: 10px;
+    text-align: center;
+  }
