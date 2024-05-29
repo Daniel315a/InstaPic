@@ -1,5 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { GalleryComponent } from '../gallery/gallery.component';
+
+
 
 @Component({
   selector: 'app-profile',
