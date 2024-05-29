@@ -13,12 +13,22 @@ import { Auth0ClientService, AuthService } from '@auth0/auth0-angular';
   styleUrl: './inicio.component.css'
 })
 export class InicioComponent {
-  constructor(public auth: AuthService) { }
+  constructor(public _authService: AuthService) { }
 
   // ngOnInit(): void {
 
   // }
-  login() {
-    // this.auth.loginWithRedirect();
+  protected sesionAct() {
+    return this._authService.isAuthenticated$.subscribe(
+      (isAuthenticated) => {
+      if (isAuthenticated) {
+        this._authService.logout();
+      }else{
+        this._authService.loginWithRedirect();
+      }
+    });
+
+
+
   }
 }

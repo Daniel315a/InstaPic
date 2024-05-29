@@ -3,6 +3,7 @@ import { ProfileComponent } from './components/profile/profile.component';
 import { BusacarComponent } from './components/busacar/busacar.component';
 import { ChatComponent } from './components/chat/chat.component';
 import { InicioComponent } from './components/inicio/inicio.component';
+import { authGuard } from './guards/auth.guard';
 
 
 
@@ -14,7 +15,8 @@ export const routes: Routes = [
     },
     {
         path: 'profile',
-        component: ProfileComponent
+        component: ProfileComponent,
+        canActivate: [authGuard]
     },
     {
         path: 'buscar',
