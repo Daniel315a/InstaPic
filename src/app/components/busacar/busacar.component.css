@@ -1,0 +1,19 @@
+
+input{
+    margin-right: 10px;
+    background-color:rgb(116, 116, 207);
+    border: solid 2px black;
+}
+
+::placeholder {
+    color: rgba(255, 255, 255, 0.678);
+}
+
+button{
+    background-color:pink;
+    border: solid 2px black;
+    border-radius: 10px;
+    font-size: smaller;
+    padding: 5px;
+
+}
