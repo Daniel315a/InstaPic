@@ -4,13 +4,7 @@ import { RootComponent } from './app/components/root/root.component';
 import { provideAuth0 } from '@auth0/auth0-angular';
 import { ActivatedRoute, provideRouter } from '@angular/router';
 import { routes } from './app/app.routes';
-
-
-
-
-// bootstrapApplication(RootComponent, appConfig)
-//   .catch((err) => console.error(err));
-
+import { provideHttpClient, withFetch } from '@angular/common/http';
 
 bootstrapApplication(RootComponent, {
   providers: [
@@ -21,6 +15,7 @@ bootstrapApplication(RootComponent, {
         redirect_uri: window.location.origin
       }
     }),
-    provideRouter(routes)
+    provideRouter(routes),
+    provideHttpClient(withFetch()),
   ]
 });
