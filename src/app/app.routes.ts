@@ -20,11 +20,13 @@ export const routes: Routes = [
     },
     {
         path: 'buscar',
-        component: BusacarComponent
+        component: BusacarComponent,
+        canActivate: [authGuard]
     },
     {
         path: 'chat',
-        component: ChatComponent
+        component: ChatComponent,
+        canActivate: [authGuard]
     },
     {
         path: '**',

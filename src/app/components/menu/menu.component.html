@@ -3,7 +3,7 @@
         <img src="assets/logo.svg" alt="logo">
     </div>
     <nav>
-        <ul class="nav-list">
+        <ul *ngIf="isAuthenticated$ | async as isAuthenticated" class="nav-list">
             <li>
                 <a routerLink="profile">
                     <i class="fa-solid fa-house"></i>
@@ -19,13 +19,12 @@
                     <i class="fa-solid fa-comments"></i>
                 </a>
             </li>
+
             <li>
-                <a href="">
+                <a (click)="logout()">
                     <i class="fa-solid fa-right-from-bracket"></i>
                 </a>
             </li>
         </ul>
     </nav>
 </header>
-
-<!-- <router-outlet></router-outlet> -->
