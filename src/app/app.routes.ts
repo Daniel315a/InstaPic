@@ -5,13 +5,10 @@ import { ChatComponent } from './components/chat/chat.component';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { authGuard } from './guards/auth.guard';
 
-
-
 export const routes: Routes = [
     {
         path: '',
         component: InicioComponent
-
     },
     {
         path: 'profile',

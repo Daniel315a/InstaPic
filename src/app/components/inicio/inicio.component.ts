@@ -24,8 +24,6 @@ export class InicioComponent  implements OnInit{
       if (isAuthenticated) {
         this._authService.user$.subscribe(
           user => {
-            console.log(user);
-
             if(user) {
               const userApp: User = {
                 id: 0,

@@ -1,5 +1,5 @@
 import { Injectable, Signal } from '@angular/core';
-import { BehaviorSubject, Observable } from 'rxjs';
+import { BehaviorSubject, Observable, finalize } from 'rxjs';
 import { User } from '../models/user';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from '../../environments/environment.development';
@@ -33,6 +33,12 @@ export class UserService {
     .set('birthDate', format(new Date(), 'yyyy-MM-dd'));
 
     return this._httpClient.post(url, body);
+  }
+
+  public getByAuth0Id(auth0Id: string): Observable<any> {
+    const url: string = this.apiUrl + 'users' + '/' + auth0Id;
+
+    return this._httpClient.get(url).pipe();
   }
 
   public getNewUser(): User {
