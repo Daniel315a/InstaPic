@@ -1,0 +1,45 @@
+<button class="button is-primary" (click)="modalPostActive = true">
+    {{buttons.upImage}}
+</button>
+
+<div class="modal" [ngClass]="modalPostActive ? 'is-active' : ''">
+    <div class="modal-background" (click)="modalPostActive = false"></div>
+    <div class="modal-content">
+
+        <div class="box">
+
+            <div class="file has-name is-fullwidth">
+                <label class="file-label">
+                    <input class="file-input" type="file" name="resume" (change)="changedFile($event)"
+                        [disabled]="uploadedImg" />
+                    <span class="file-cta">
+                        <span class="file-icon">
+                            <i class="fas fa-upload"></i>
+                        </span>
+                        <span class="file-label"> {{ buttons.chooseFile }} </span>
+                    </span>
+                    <span class="file-name"> {{ fileName }} </span>
+                </label>
+            </div>
+
+            <div class="field is-fullwidth">
+                <div class="field-body">
+
+                    <input class="input is-primary" type="text" name="title" [(ngModel)]="post.title"
+                        placeholder="{{labels.title}}">
+
+                </div>
+            </div>
+
+            <div class="buttons is-right">
+
+                <button class="button is-primary" (click)="save()" [disabled]="loadingImg">
+                    {{buttons.savePost}}
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+</div>

@@ -3,12 +3,14 @@
         <img src="assets/no-user.png" alt="Foto de perfil">
     </div>
     <div class="informacion-perfil">
-        <h2>Nombre Completo</h2>
+        <h2> {{ user.nickName }}</h2>
         <p>Solicitudes de amistad <strong> 8 </strong> </p>
         <p>Amigos <strong> 20 </strong> </p>
         <p>Posts <strong> 4 </strong> </p>
-        <h1>Agrega una imagen</h1>
-        <input type="file">
+        
+        <app-new-post>
+        </app-new-post>
+
     </div>
 </div>
 

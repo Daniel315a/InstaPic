@@ -1,11 +1,7 @@
 <section class="galeria">
-    <div class="foto"><img src="./assets/cat-1045782_1920.jpg" alt=""></div>
-    <div class="foto"><img src="./assets/cat-323262_1920.jpg" alt=""></div>
-    <div class="foto"><img src="./assets/kingfisher-2046453_1920.jpg" alt=""></div>
-    <div class="foto"><img src="./assets/owl-1845060_1920.jpg" alt=""></div>
-    <div class="foto"><img src="./assets/owl-50267_1920.jpg" alt=""></div>
-    <div class="foto"><img src="./assets/parrot-3601194_1920.jpg" alt=""></div>
-    <div class="foto"><img src="./assets/sea-2361247_1920.jpg" alt=""></div>
-    <div class="foto"><img src="./assets/tiger-3264048_1920.jpg" alt=""></div>
-    <div class="foto"></div>
+    <div class="foto" *ngFor="let post of posts">
+        <img src="{{post.urlResource}}" alt="">
+    </div>
 </section>
+
+<app-image-viewer></app-image-viewer>

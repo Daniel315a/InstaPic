@@ -3,24 +3,21 @@
         <img src="assets/logo.svg" alt="logo">
     </div>
     <nav>
-        <ul class="nav-list">
+        <ul *ngIf="isAuthenticated$ | async as isAuthenticated" class="nav-list">
             <li>
-                <a href="">
+                <a routerLink="profile">
                     <i class="fa-solid fa-house"></i>
                 </a>
             </li>
+            
             <li>
-                <a href="">
+                <a routerLink="buscar">
                     <i class="fa-solid fa-user-group"></i>
                 </a>
             </li>
+
             <li>
-                <a href="">
-                    <i class="fa-solid fa-comments"></i>
-                </a>
-            </li>
-            <li>
-                <a href="">
+                <a (click)="logout()">
                     <i class="fa-solid fa-right-from-bracket"></i>
                 </a>
             </li>
