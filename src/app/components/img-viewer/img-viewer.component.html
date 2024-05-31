@@ -1,0 +1,34 @@
+<div class="modal" [ngClass]="modalActive ? 'is-active' : ''">
+
+    <div class="modal-background" (click)="modalActive = false"></div>
+
+    <div class="modal-content">
+        
+        <div class="box">
+
+            <div class="columns">
+
+                <div class="column is-two-thirds">
+                    <div class="img-container">
+                        <img src="{{post.urlResource}}" alt="">
+                    </div>
+                </div>
+                <div class="column comments">
+
+                    <h1>{{labels.comments}}</h1>
+
+                    <hr>
+
+                    <div class="box has-text-left">
+                        <p class="is-size-7">Esto es un hermoso comentario</p>
+                    </div>
+                    
+                </div>
+            
+            </div>
+
+        </div>
+
+    </div>
+
+</div>

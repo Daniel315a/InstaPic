@@ -15,6 +15,7 @@ export class PostService {
   private readonly imgServerUrl: string = environment.IMG_SERVER_URL;
   private currentUserApp: User = this._userService.getNewUser();
   public postAdded: EventEmitter<boolean> = new EventEmitter<boolean>();
+  public establishedPost: EventEmitter<Post> = new EventEmitter<Post>();
 
   constructor(
     private _httpClient: HttpClient,

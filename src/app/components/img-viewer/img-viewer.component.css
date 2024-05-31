@@ -1,0 +1,8 @@
+.img-container {
+    border-right: 2px solid gray;
+    text-align: center;
+}
+
+.comments {
+    overflow: auto;
+}

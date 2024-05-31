@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { ImageViewerComponent } from '../image-viewer/image-viewer.component';
 import { PostService } from '../../services/post.service';
 import { CommonModule } from '@angular/common';
+import { ImgViewerComponent } from '../img-viewer/img-viewer.component';
+import { Post } from '../../models/post';
 
 @Component({
   selector: 'app-gallery',
   standalone: true,
   imports: [
-    ImageViewerComponent,
-    CommonModule
+    CommonModule,
+    ImgViewerComponent
   ],
   templateUrl: './gallery.component.html',
   styleUrl: './gallery.component.css'
@@ -38,5 +39,9 @@ export class GalleryComponent implements OnInit {
       }
     );
   } 
+
+  protected setPost(post: Post) {
+    this._postService.establishedPost.emit(post);
+  }
 
 }
